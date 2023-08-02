@@ -18,6 +18,8 @@ function App() {
         const response = await fetch(`${API_URL}&s=${title}`);
         const data = await response.json();
         setMovies(data.Search);
+        console.log(movies);
+        
     }
     useEffect(() => {
         searchMovies(searchTerm);
@@ -39,20 +41,18 @@ function App() {
                 /> 
             </div>
             {
-               movies?.length >= 0
-                ? (
+                movies?.length > 0
+                    ? (
                         <div className="container">
                             {
-                                movies.map((movie) => {
-                                    console.log(movies.length);
-                                    <h1 className="test">{ movie.Title}</h1>
-                                })
+                                movies.map((movie) => (
+                                    <MovieCard movie1={movie} />
+                                ))
                             }
-                            
-                    </div>
+                         </div>
                     ) : (
                         <div className="empty">
-                            <h2>No Data Found</h2>
+                            <h2>No movies found</h2>
                         </div>
                 )
             }
