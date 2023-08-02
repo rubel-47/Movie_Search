@@ -30,9 +30,16 @@ body {
 }
 .app {
     text-align: center;
+    h1 {
+        color: yellow;
+    }
 }
 .test {
     background-color: red;
     height: 100px;
     width: 500px;
+}
+.container {
+    display: grid;
+    gap: 30px;
 }

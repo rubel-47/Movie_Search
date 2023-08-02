@@ -1,8 +1,8 @@
 import React from "react";
 import "./style.scss";
-const MovieCard = ({movie1}) => {
+const MovieCard = ({ movie1 }) => {
     return (
-        <div className="container">
+        <div className="movie">
             <div>
                 <p>{movie1.Year}</p>
             </div>
